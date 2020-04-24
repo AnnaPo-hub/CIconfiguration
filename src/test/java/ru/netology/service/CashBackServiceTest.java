@@ -15,7 +15,6 @@ public class CashBackServiceTest {
 void shouldCheckRemain( int amount, int expected){
     int actual = cashBackService.remain(amount);
     assertEquals(expected, actual);
-
 }
     @Test
     public void shouldReturn100IfAmountIs900() {
@@ -32,7 +31,5 @@ void shouldCheckRemain( int amount, int expected){
     @Test
     public void shouldThrowExceptionIfAmountLessThanZero() {
         assertThrows(IllegalArgumentException.class, () -> cashBackService.remain(-1));
-
     }
-
 }
